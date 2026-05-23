@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import './App.css'
 
-const API_URL = 'http://localhost:8080/catalogo'
+const API_URL = import.meta.env.VITE_SD_API_URL
 
 const emptyForm = {
   nome: '',
