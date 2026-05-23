@@ -7,8 +7,7 @@ function App() {
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    // Consome o Microsserviço A (Catálogo) na porta 8080
-    fetch('http://localhost:8080/catalogo/produtos')
+    fetch(import.meta.env.VITE_SD_API_URL)
       .then((response) => {
         if (!response.ok) {
           throw new Error('Falha ao conectar com o servidor de Catálogo')
@@ -32,7 +31,7 @@ function App() {
     <div className="container">
       <header>
         <h1>💻 SD Hardware Store</h1>
-        <p>Arquitetura de Microsserviços Distribuídos</p>
+        <p>Catálogo de Produtos — sd-catalogo + sd-preco</p>
       </header>
 
       <div className="grid">
